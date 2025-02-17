@@ -1,10 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Basic HTML Skeleton</title>
+    <title>Basic HTML Skeleton</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1 id="headline">Hello</h1>
-    <script>const headline = document.getElementById("headline"); headline.innerText = "ok"</script> <!-- Link to external JavaScript file -->
+<h1 id="headline">Hello</h1>
+<div id="banner">
+<!--    <button onclick="showMysteryFood('food1')">?</button>-->
+<!--    <button onclick="showMysteryFood('food2')">?</button>-->
+</div>
+<div>
+    <h2 id="subheading" style="margin: auto; text-align: center;">Chicken Tenders VS Sweet Chilli Chicken</h2>
+</div>
+
+<div id="image-div">
+    <img src="https://easychickenrecipes.com/wp-content/uploads/2021/04/fried-chicken-tenders-recipe-3.jpg" alt="Chicken Tenders">
+    <img src="https://www.recipemagik.com/wp-content/uploads/2021/02/Sweet-Chili-Chicken-Recipe-6.jpg" alt="Sweet Chilli Chicken">
+</div>
+<script>
+    const headline = document.getElementById("headline");
+    headline.innerText = "What's for lunch?";
+</script>
 </body>
 </html>

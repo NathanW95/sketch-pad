@@ -1,0 +1,38 @@
+body {
+    background-color: #fdb864;
+    /*background-image: url("https://static.vecteezy.com/system/resources/previews/010/356/197/original/red-and-white-scottish-woven-tartan-plaid-seamless-pattern-free-vector.jpg");*/
+    margin: auto;
+    font-family: Arial, sans-serif;
+}
+
+h1, h2 {
+    text-align: center;
+    margin: 0.5em 0;
+}
+
+#image-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px; /* Set a fixed height for the container */
+    overflow: hidden; /* Ensure no overflow from images */
+}
+
+#image-div img {
+    width: 50%;
+    height: 100%; /* Make images take the full height of the container */
+    object-fit: cover; /* Ensure images cover the container without distortion */
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    #image-div {
+        flex-direction: column;
+        height: auto; /* Allow height to adjust based on content */
+    }
+
+    #image-div img {
+        width: 100%;
+        height: auto; /* Allow images to maintain aspect ratio */
+    }
+}
