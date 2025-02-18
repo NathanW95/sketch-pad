@@ -6,22 +6,24 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<h1 id="headline">Hello</h1>
-<div id="banner">
-<!--    <button onclick="showMysteryFood('food1')">?</button>-->
-<!--    <button onclick="showMysteryFood('food2')">?</button>-->
-</div>
+<h1 id="headline">What's for lunch?</h1>
 <div>
-    <h2 id="subheading" style="margin: auto; text-align: center;">Chicken Tenders VS Sweet Chilli Chicken</h2>
+    <h2 id="subheading" style="margin: auto; text-align: center;">Choose a mystery box</h2>
+</div>
+<div id="banner">
+    <button onclick="showMysteryFood('food1')">?</button>
+    <button onclick="showMysteryFood('dunderMifflin')">?</button>
+    <button onclick="showMysteryFood('food2')">?</button>
 </div>
 
 <div id="image-div">
-    <img src="https://easychickenrecipes.com/wp-content/uploads/2021/04/fried-chicken-tenders-recipe-3.jpg" alt="Chicken Tenders">
-    <img src="https://www.recipemagik.com/wp-content/uploads/2021/02/Sweet-Chili-Chicken-Recipe-6.jpg" alt="Sweet Chilli Chicken">
+    <img id="foodImage">
 </div>
-<script>
-    const headline = document.getElementById("headline");
-    headline.innerText = "What's for lunch?";
+<script src="main.js">
+    // const headline = document.getElementById("headline");
+    // headline.innerText = "What's for lunch?";
+    // const foodImage = document.getElementById("foodImage");
+    // foodImage.src = ""
 </script>
 </body>
 </html>
