@@ -31,24 +31,120 @@ body {
 h1, h2 {
     text-align: center;
     margin: 0.5em 0;
+    font-family: Sathu, sans-serif
 }
 
-#image-div {
+#question-sub-header {
+    text-align: center;
+    align-content: center;
+    text-color: white;
+    font-family: Sathu, sans-serif;
+}
+
+#cuisine-tiles-div {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    height: 300px;
+    align-content: center;
+    height: 100%;
+    margin: 20px;
     overflow: hidden;
 }
 
-#image-div img {
-    /*display: none; !* Hide the image by default *!*/
-    width: 50%;
-    height: 100%;
-    object-fit: cover;
+.image-container {
+        position: relative;
+        min-width: 25%; /* Ensures the container fits the image */
+        min-height: 25%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        width: 25%; /* Ensures the container fits the image */
+        transition: all 0.5s ease;
+        margin-bottom: 1em;
 }
 
-/* Ensure flexbox layout is applied consistently */
+.image-props {
+    /*width: 150px;*/
+    aspect-ratio: 1/1;
+    /*height: 150px;*/
+}
+
+.image-tile {
+    height: 100%;
+    width: 100%;
+    margin: 20px;
+    object-fit: cover;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s; /* Smooth transition for hover effects */
+    cursor: pointer; /* Change cursor to pointer to indicate it's clickable */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow for a more raised effect */
+    border-radius: 20px; /* Rounded corners for a softer look */
+    background-color: white;
+    overflow: hidden;
+}
+
+.image-tile:hover {
+    transform: scale(1.05); /* Slightly enlarge the image on hover */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4); /* Darker and larger shadow on hover */
+    background-color: #f0f0f0; /* Subtle background color change on hover */
+    filter: brightness(1.0) contrast(0.9);
+}
+
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px black;
+    pointer-events: none; /* Ensures the text doesn't interfere with button clicks */
+}
+
+.section-container {
+    margin-top: 10%;
+    margin-bottom: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    z-index: 10;
+}
+
+#question-mark-tile-div {
+    width: 35%; /* Increase the width for the question mark tile */
+    height: auto; /* Maintain aspect ratio */
+}
+
+
+
+.centred {
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.show {
+    display: flex;
+}
+
+.enlarged {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(2); /* Center and enlarge */
+    z-index: 10; /* Bring to front */
+}
+
+
+
+    /* Ensure flexbox layout is applied consistently */
 @media (max-width: 768px) {
     #image-div {
         flex-direction: column;

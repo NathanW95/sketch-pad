@@ -6,19 +6,61 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<h1 id="headline">What's for lunch?</h1>
-<div>
-    <h2 id="subheading" style="margin: auto; text-align: center;">Choose a mystery box</h2>
-</div>
+<h1 id="headline">Where to eat in Manchester?</h1>
 <div id="banner">
-    <button onclick="showMysteryFood('food1')">?</button>
-    <button onclick="showMysteryFood('dunderMifflin')">?</button>
-    <button onclick="showMysteryFood('food2')">?</button>
+    <h2 id="question-sub-header" style="margin: auto; text-align: center;">Choose your cuisine</h2>
 </div>
 
-<div id="image-div">
-    <img id="foodImage">
+<div id="cuisine-tiles-div">
+
+    <div id="indian-tile-div" class="image-container image-props">
+        <input id="indian-img" class="image-tile" type="image" src="https://images.ctfassets.net/3s5io6mnxfqz/6ZImCEzx6UuvuKaAiZEDDN/50479ee4a0902deb4eb1bab720ce248a/image1.jpg" onclick="handleImageClick('indian')">
+        <div id="indian-overlay" class="overlay-text">Indian</div>
+    </div>
+
+    <div id="italian-tile-div" class="image-container image-props">
+        <input id="italian-img" class="image-tile" type="image" src="https://www.tastingtable.com/img/gallery/20-italian-dishes-you-need-to-try-at-least-once/l-intro-1643403830.jpg " onclick="handleImageClick('italian')">
+        <div id="italian-overlay" class="overlay-text">Italian</div>
+    </div>
+
+    <div id="greek-tile-div" class="image-container image-props">
+        <input id="greek-img" class="image-tile" type="image" src="https://www.theblackpeppercorn.com/wp-content/uploads/2017/08/Grilled-Greek-Souvlaki-Lamb-Chicken-Pork-overhead-wide-hires.jpg" onclick="handleImageClick('greek')">
+        <div id="greek-overlay" class="overlay-text">Greek</div>
+    </div>
+
+    <div id="chinese-tile-div" class="image-container image-props">
+        <input id="chinese-img" class="image-tile" type="image" src="https://www.antonio-carluccio.com/wp-content/uploads/2020/05/Chinese-Dishes-2048x1405.jpg" onclick="handleImageClick('chinese')">
+        <div id="chinese-overlay" class="overlay-text">Chinese</div>
+    </div>
+
+    <div id="thai-tile-div" class="image-container image-props">
+        <input id="thai-img" class="image-tile" type="image" src="https://www.foodies.pk/wp-content/uploads/2020/05/asian-food-1024x628.jpeg" onclick="handleImageClick('thai')">
+        <div id="thai-overlay" class="overlay-text">Thai</div>
+    </div>
+
+    <div id="mexican-tile-div" class="image-container image-props">
+        <input id="mexican-img" class="image-tile" type="image" src="https://wallpapers.com/images/hd/mexico-foods-pictures-1000-x-667-3dhzpz530854migd.jpg" onclick="handleImageClick('mexican')">
+        <div id="mexican-overlay" class="overlay-text">Mexican</div>
+    </div>
+
+    <div id="american-tile-div" class="image-container image-props">
+        <input id="american-img" class="image-tile" type="image" src="https://statik.tempo.co/data/2023/03/25/id_1191903/1191903_720.jpg" onclick="handleImageClick('american')">
+        <div id="american-overlay" class="overlay-text">American</div>
+    </div>
+
+    <div id="english-tile-div" class="image-container image-props">
+        <input id="english-img" class="image-tile" type="image" src="https://www.kayak.co.uk/news/wp-content/uploads/sites/5/2022/01/feature-image_breakfast_english_england_shutterstock-premier_558715117_universal_within-usage-period_25001.jpg" onclick="handleImageClick('english')">
+        <div id="english-overlay" class="overlay-text">English</div>
+    </div>
+
 </div>
+<div id="lower-section" class="section-container">
+    <div id="question-mark-tile-div" class="image-container image-props centered">
+        <input id="question-mark-img" class="image-tile" type="image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Orange_question_mark.svg/2048px-Orange_question_mark.svg.png" onclick="handleImageClick('question-mark')">
+        <div id="question-mark-overlay" class="overlay-text">Food Pic</div>
+    </div>
+</div>
+
 <script src="main.js">
 </script>
 </body>
